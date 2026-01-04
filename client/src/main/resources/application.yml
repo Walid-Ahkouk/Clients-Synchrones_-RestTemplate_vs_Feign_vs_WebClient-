@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery: SERVICE-CLIENT
+  application:
+    name: SERVICE-CLIENT
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/clientservicedb
+    username: "postgres"
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8088
